@@ -2,6 +2,7 @@ package com.example.myandroidapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,16 +11,17 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edUsername, edPassword;
-    Button btn;
+    Button btn, regBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_login);
 
-        edUsername =  findViewById(R.id.editTextUsername);
-        edPassword = findViewById(R.id.editTextPassword);
+        edUsername =  findViewById(R.id.editTextLoginUsername);
+        edPassword = findViewById(R.id.editTextLoginPassword);
         btn = findViewById(R.id.signInButton);
+        regBtn = findViewById(R.id.regHereBtn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,6 +33,13 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     Toast.makeText(getApplicationContext(), "Login Success!", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        regBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
     }

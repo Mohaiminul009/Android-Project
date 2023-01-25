@@ -35,7 +35,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextLoginPassword"
         android:layout_width="374dp"
         android:layout_height="55dp"
         android:background="@drawable/input_bg"
@@ -56,7 +56,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/editTextLoginUsername"
         android:layout_width="376dp"
         android:layout_height="63dp"
         android:background="@drawable/input_bg"
@@ -107,7 +107,7 @@
         app:layout_constraintVertical_bias="0.794" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/regHereBtn"
         android:layout_width="311dp"
         android:layout_height="51dp"
         android:background="@color/transparent"
