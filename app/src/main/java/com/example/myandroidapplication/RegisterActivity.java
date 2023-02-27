@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText edName, edEmail, edUsername, edPassword;
-    Button registerBtn, accountBtn;
+    Button registerBtn;
+    TextView accountText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
         edUsername =  findViewById(R.id.editTextRegisterUsername);
         edPassword = findViewById(R.id.editTextRegisterPassword);
         registerBtn = findViewById(R.id.registerButton);
-        accountBtn = findViewById(R.id.alreadyAccountButton);
+        accountText = findViewById(R.id.alreadyAccountText);
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        accountBtn.setOnClickListener(new View.OnClickListener() {
+        accountText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
