@@ -19,9 +19,16 @@ public class Database extends SQLiteOpenHelper {
         super(context, name, factory, version, errorHandler);
     }
 
+    private static final String TABLE_NAME = "users";
+    private static final String USER_ID = "user_id";
+    private static final String USER_NAME = "user_name";
+    private static final String USER_EMAIL = "user_email";
+    private static final String USER_USERNAME = "user_username";
+    private static final String USER_PASSWORD = "user_password";
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String query = "CREATE TABLE users (user_id INTEGER PRIMARY KEY AUTOINCREMENT, user_name TEXT, user_email TEXT, user_username TEXT, user_password TEXT)";
+        String query = "CREATE TABLE TABLE_NAME (USER_ID INTEGER PRIMARY KEY AUTOINCREMENT, USER_NAME TEXT, USER_EMAIL TEXT, USER_USERNAME TEXT, USER_PASSWORD TEXT)";
         sqLiteDatabase.execSQL(query);
     }
 
@@ -29,12 +36,12 @@ public class Database extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put("user_name", name);
-        values.put("user_email", email);
-        values.put("user_username", username);
-        values.put("user_password", password);
+        values.put(USER_NAME, name);
+        values.put(USER_EMAIL, email);
+        values.put(USER_USERNAME, username);
+        values.put(USER_PASSWORD, password);
 
-        db.insert("users", null, values);
+        db.insert(TABLE_NAME, null, values);
         db.close();
     }
 

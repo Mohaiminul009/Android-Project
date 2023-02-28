@@ -13,7 +13,7 @@
         android:layout_height="68dp"
         android:text="Login"
         android:textAlignment="center"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/teal_200"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,19 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.298" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="253dp"
-        android:layout_height="100dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122"
-        app:srcCompat="@drawable/icons"
-        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextLoginPassword"
@@ -46,7 +33,7 @@
         android:inputType="textPassword"
         android:padding="10sp"
         android:textColor="@color/gray"
-        android:textColorHint="@color/gray"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,17 +54,16 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:padding="10sp"
-        android:text="Username"
         android:textColor="@color/gray"
-        android:textColorHint="@color/gray"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464"
+        app:layout_constraintVertical_bias="0.44"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -111,25 +97,26 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="187dp"
-        android:layout_height="40dp"
+        android:layout_width="217dp"
+        android:layout_height="31dp"
         android:text="Do not have any account?"
-        android:textColor="@color/gray"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.872" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <TextView
         android:id="@+id/registerHereText"
         android:layout_width="110dp"
         android:layout_height="37dp"
         android:text="Register here"
-        android:textColor="@color/blue"
-        android:textSize="16sp"
+        android:textColor="@color/blueback"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.817"
