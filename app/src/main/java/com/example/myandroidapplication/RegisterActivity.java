@@ -27,15 +27,15 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn = findViewById(R.id.registerButton);
         accountText = findViewById(R.id.alreadyAccountText);
 
-        edUsername.setKeyListener(null);
-        edPassword.setKeyListener(null);
-
-        Intent it = getIntent();
-        String userName = it.getStringExtra("username");
-        String passWord = it.getStringExtra("password");
-
-        edUsername.setText(userName);
-        edPassword.setText(passWord);
+//        edUsername.setKeyListener(null);
+//        edPassword.setKeyListener(null);
+//
+//        Intent it = getIntent();
+//        String userName = it.getStringExtra("username");
+//        String passWord = it.getStringExtra("password");
+//
+//        edUsername.setText(userName);
+//        edPassword.setText(passWord);
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String userName = edUsername.getText().toString();
                 String passWord = edPassword.getText().toString();
 
-                System.out.println(name + " " + userEmail + " " + edUsername + " " + passWord);
+                System.err.println(name + " " + userEmail + " " + userName + " " + passWord);
 
                 Database db = new Database(getApplicationContext(), "TO-LET", null, 1);
                 if (name.length() == 0 || userEmail.length() == 0 || userName.length() == 0 || passWord.length() == 0){

@@ -43,10 +43,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
 
-                Intent it = new Intent(LoginActivity.this, RegisterActivity.class);
-                it.putExtra("username", edUsername.getText().toString());
-                it.putExtra("password", edPassword.getText().toString());
-                startActivity(it);
+//                Intent it = new Intent(LoginActivity.this, RegisterActivity.class);
+//                it.putExtra("username", edUsername.getText().toString());
+//                it.putExtra("password", edPassword.getText().toString());
+//                startActivity(it);
             }
         });
     }
