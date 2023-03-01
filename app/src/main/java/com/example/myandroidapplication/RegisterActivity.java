@@ -54,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if (passWord.length() >= 6){
                         db.addNewUser(name, userEmail, userName, passWord);
                         Toast.makeText(getApplicationContext(), "Data inserted!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                     } else{
                         Toast.makeText(getApplicationContext(), "Password must be minimum 6 characters", Toast.LENGTH_SHORT).show();
                     }
