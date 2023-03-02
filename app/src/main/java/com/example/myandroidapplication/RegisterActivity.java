@@ -44,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String userName = edUsername.getText().toString();
                 String passWord = edPassword.getText().toString();
 
+
                 System.err.println(name + " " + userEmail + " " + userName + " " + passWord);
 
                 Database db = new Database(getApplicationContext(), "TO-LET", null, 1);

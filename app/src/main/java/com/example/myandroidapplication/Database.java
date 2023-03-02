@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
+import com.example.myandroidapplication.entity.Profile;
+
 public class Database extends SQLiteOpenHelper {
 
 
@@ -30,6 +32,9 @@ public class Database extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String query = "CREATE TABLE "+TABLE_NAME+" ("+USER_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+USER_NAME+" TEXT,"+USER_EMAIL+" TEXT,"+USER_USERNAME+" TEXT,"+USER_PASSWORD+" TEXT)";
         sqLiteDatabase.execSQL(query);
+
+        String query2 = "CREATE TABLE profile (username TEXT, phone TEXT, division TEXT, district TEXT, area TEXT, address TEXT)";
+        sqLiteDatabase.execSQL(query2);
     }
 
     public void addNewUser(String name, String email, String username, String password){
@@ -42,6 +47,21 @@ public class Database extends SQLiteOpenHelper {
         values.put(USER_PASSWORD, password);
 
         db.insert(TABLE_NAME, null, values);
+        db.close();
+    }
+
+    public void addProfile(Profile profile){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("username", profile.getUsername());
+        values.put("phone", profile.getPhone());
+        values.put("division", profile.getDivision());
+        values.put("district", profile.getDistrict());
+        values.put("area", profile.getArea());
+        values.put("address", profile.getAddress());
+
+        db.insert("profile", null, values);
         db.close();
     }
 
