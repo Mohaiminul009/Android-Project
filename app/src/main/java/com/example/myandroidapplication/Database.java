@@ -10,6 +10,9 @@ import androidx.annotation.Nullable;
 
 import com.example.myandroidapplication.entity.Profile;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Database extends SQLiteOpenHelper {
 
 
@@ -75,6 +78,25 @@ public class Database extends SQLiteOpenHelper {
             return 1;
         }
         return 0;
+    }
+
+    public ArrayList<HashMap<String, String>> getUser(){
+        HashMap<String, String> user;
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM users", null);
+        ArrayList<HashMap<String, String>> userList = new ArrayList<>(c.getCount());
+        if (c.moveToFirst()){
+            do{
+                user = new HashMap<>();
+                user.put(USER_NAME, c.getString(0));
+                user.put(USER_EMAIL, c.getString(1));
+                user.put(USER_USERNAME, c.getString(2));
+                user.put(USER_PASSWORD, c.getString(3));
+                userList.add(user);
+            }while(c.moveToNext());
+        }
+        sqLiteDatabase.close();
+        return userList;
     }
 
     @Override

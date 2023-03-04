@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                         SharedPreferences.Editor editor = sp.edit();
                         editor.putString("username", userName);
                         editor.apply();
-                        startActivity(new Intent(LoginActivity.this, ProfileAddActivity.class));
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     }else{
                         Toast.makeText(getApplicationContext(), "Login Failed!", Toast.LENGTH_SHORT).show();
                     }
