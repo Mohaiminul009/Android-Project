@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">My Android Application</string>
+    <string name="app_name">TO-LET</string>
+    <string name="dialog_message">Welcome to Alert Dialog</string>
+    <string name="dialog_title">Alert Dialog</string>
 </resources>
