@@ -15,6 +15,8 @@ public class RegisterActivity extends AppCompatActivity {
     Button registerBtn;
     TextView accountText;
 
+    private Integer Id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,8 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle data = getIntent().getExtras();
+                Id = data.getInt("user_id");
                 String name = edName.getText().toString();
                 String userEmail = edEmail.getText().toString();
                 String userName = edUsername.getText().toString();
@@ -52,17 +56,40 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please fill the data field", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    if (passWord.length() >= 6){
+                    if (Id != null){
+                        db.updateUser(Id, name, userEmail, userName, passWord);
+                        Toast.makeText(getApplicationContext(), "Data updated" +
+                                "!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                    }else{
                         db.addNewUser(name, userEmail, userName, passWord);
                         Toast.makeText(getApplicationContext(), "Data inserted!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                    } else{
-                        Toast.makeText(getApplicationContext(), "Password must be minimum 6 characters", Toast.LENGTH_SHORT).show();
                     }
+//                    if (passWord.length() >= 6){
+//
+//                    } else{
+//                        Toast.makeText(getApplicationContext(), "Password must be minimum 6 characters", Toast.LENGTH_SHORT).show();
+//                    }
 
                 }
             }
         });
+
+        Bundle data = getIntent().getExtras();
+        if (data != null){
+            Id = data.getInt("user_id");
+            String userName = data.getString("user_name");
+            String userEmail = data.getString("user_email");
+            String userUsername = data.getString("user_username");
+            String userPassword = data.getString("user_password");
+
+            edName.setText(userName);
+            edEmail.setText(userEmail);
+            edUsername.setText(userUsername);
+            edPassword.setText(userPassword);
+            registerBtn.setText("update");
+        }
 
         accountText.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,77 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10sp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10sp"
-        android:text="User List"
-        android:textAlignment="center"
-        android:textColor="@color/gold"
-        android:textSize="20sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="31dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="0.20"
-            android:background="@color/green"
-            android:text="Fullname"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="0.20"
-            android:background="@color/green"
-            android:text="Email"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="0.20"
-            android:background="@color/green"
-            android:text="Username"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="0.20"
-            android:background="@color/green"
-            android:text="Password"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="0.20"
-            android:background="@color/green"
-            android:text="Action"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,11 +36,10 @@
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="0.20"
-            android:background="@color/accentblue"
-            android:text="TextView" />
+            android:background="@color/accentblue" />
 
         <TextView
-            android:id="@+id/textView29"
+            android:id="@+id/textViewEditBtn"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="0.10"
@@ -119,7 +47,7 @@
             android:drawableLeft="@drawable/ic_baseline_edit_24" />
 
         <TextView
-            android:id="@+id/textView30"
+            android:id="@+id/textViewDeleteBtn"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="0.10"

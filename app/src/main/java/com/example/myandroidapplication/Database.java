@@ -88,15 +88,37 @@ public class Database extends SQLiteOpenHelper {
         if (c.moveToFirst()){
             do{
                 user = new HashMap<>();
-                user.put(USER_NAME, c.getString(0));
-                user.put(USER_EMAIL, c.getString(1));
-                user.put(USER_USERNAME, c.getString(2));
-                user.put(USER_PASSWORD, c.getString(3));
+                user.put(USER_ID, c.getString(0));
+                user.put(USER_NAME, c.getString(1));
+                user.put(USER_EMAIL, c.getString(2));
+                user.put(USER_USERNAME, c.getString(3));
+                user.put(USER_PASSWORD, c.getString(4));
                 userList.add(user);
             }while(c.moveToNext());
         }
         sqLiteDatabase.close();
         return userList;
+    }
+
+    public boolean updateUser(int id, String name, String email, String username, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(USER_ID, id);
+        values.put(USER_NAME, name);
+        values.put(USER_EMAIL, email);
+        values.put(USER_USERNAME, username);
+        values.put(USER_PASSWORD, password);
+
+        int result = db.update(TABLE_NAME, values, "user_id = ?", new String[]{id + ""});
+        db.close();
+        return result > 0;
+    }
+
+    public boolean deleteUser(int id){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        int rowCount = sqLiteDatabase.delete(TABLE_NAME, "user_id = ?", new String[]{id + " "});
+        sqLiteDatabase.close();
+        return  rowCount > 0;
     }
 
     @Override
