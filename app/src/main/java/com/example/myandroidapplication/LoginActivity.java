@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String userName = edUsername.getText().toString();
                 String passWord = edPassword.getText().toString();
-                startActivity(new Intent(LoginActivity.this, UserListActivity.class));
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
 //                if (userName.length() == 0 || passWord.length() == 0) {
 //                    Toast.makeText(getApplicationContext(), "Please fill all the data field", Toast.LENGTH_SHORT).show();
 //                } else {

@@ -27,7 +27,7 @@
             app:layout_constraintVertical_bias="0.227" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/textViewProfileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -55,11 +55,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:columnCount="2"
-        android:rowCount="4">
+        android:rowCount="3">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardAddDoctor"
@@ -82,31 +82,24 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
+
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home" />
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/news_feed" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textViewNewsFeed"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/primary_300"
+                    android:background="@drawable/input_bg"
                     android:padding="3dp"
                     android:text="News Feed"
                     android:textAlignment="center"
-                    android:textColor="@color/accentblue" />
-
-
-
-<!--                <Button-->
-<!--                    android:id="@+id/buttonHomeLogout"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Logout"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintHorizontal_bias="0.55"-->
-<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -133,17 +126,22 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home" />
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/post" />
 
-                <Button
-                    android:id="@+id/listView"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewPost"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="List View"
-                    tools:layout_editor_absoluteX="212dp"
-                    tools:layout_editor_absoluteY="295dp" />
+                    android:background="@drawable/input_bg"
+                    android:padding="3dp"
+                    android:text="Post"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -171,17 +169,22 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home" />
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/prof" />
 
-                <Button
-                    android:id="@+id/buttonAddDoctor"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewProfile"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Doctor"
-                    tools:layout_editor_absoluteX="212dp"
-                    tools:layout_editor_absoluteY="170dp" />
+                    android:background="@drawable/input_bg"
+                    android:padding="3dp"
+                    android:text="Profile"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -208,17 +211,22 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/imageView7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home" />
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/logout" />
 
-                <Button
-                    android:id="@+id/buttonAddDoctor1"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewLogout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Doctor"
-                    tools:layout_editor_absoluteX="212dp"
-                    tools:layout_editor_absoluteY="170dp" />
+                    android:background="@drawable/input_bg"
+                    android:padding="3dp"
+                    android:text="Logout"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -282,17 +290,22 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/imageView8"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home" />
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/users" />
 
-                <Button
-                    android:id="@+id/buttonAddDoctor3"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewUsers"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="User List"
-                    tools:layout_editor_absoluteX="212dp"
-                    tools:layout_editor_absoluteY="170dp" />
+                    android:background="@drawable/input_bg"
+                    android:padding="3dp"
+                    android:text="Users"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
