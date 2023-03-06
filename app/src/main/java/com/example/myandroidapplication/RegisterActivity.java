@@ -22,6 +22,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
+
+
         edName = findViewById(R.id.editTextRegisterName);
         edEmail = findViewById(R.id.editTextRegisterEmail);
         edUsername =  findViewById(R.id.editTextRegisterUsername);
@@ -38,11 +41,26 @@ public class RegisterActivity extends AppCompatActivity {
 //
 //        edUsername.setText(userName);
 //        edPassword.setText(passWord);
+
+
+        Bundle data = getIntent().getExtras();
+        if (data != null){
+            Id = data.getInt("user_id");
+            String userName = data.getString("user_name");
+            String userEmail = data.getString("user_email");
+            String userUsername = data.getString("user_username");
+            String userPassword = data.getString("user_password");
+
+            edName.setText(userName);
+            edEmail.setText(userEmail);
+            edUsername.setText(userUsername);
+            edPassword.setText(userPassword);
+            registerBtn.setText("update");
+        }
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle data = getIntent().getExtras();
-                Id = data.getInt("user_id");
+
                 String name = edName.getText().toString();
                 String userEmail = edEmail.getText().toString();
                 String userName = edUsername.getText().toString();
@@ -76,20 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        Bundle data = getIntent().getExtras();
-        if (data != null){
-            Id = data.getInt("user_id");
-            String userName = data.getString("user_name");
-            String userEmail = data.getString("user_email");
-            String userUsername = data.getString("user_username");
-            String userPassword = data.getString("user_password");
 
-            edName.setText(userName);
-            edEmail.setText(userEmail);
-            edUsername.setText(userUsername);
-            edPassword.setText(userPassword);
-            registerBtn.setText("update");
-        }
 
         accountText.setOnClickListener(new View.OnClickListener() {
             @Override
