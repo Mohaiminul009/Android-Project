@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="2dp"
-            android:text="Women"
+            android:text="Melena Fernandez"
             android:textColor="@color/accentblue"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -148,7 +148,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardLabTest"
+            android:id="@+id/cardProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -191,7 +191,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardLabTest1"
+            android:id="@+id/cardLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -254,17 +254,22 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/imageView8"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home" />
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/settings" />
 
-                <Button
-                    android:id="@+id/buttonAddDoctor2"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/textViewSettings"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Doctor"
-                    tools:layout_editor_absoluteX="212dp"
-                    tools:layout_editor_absoluteY="170dp" />
+                    android:background="@drawable/input_bg"
+                    android:padding="3dp"
+                    android:text="Settings"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -291,7 +296,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/imageView9"
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     app:srcCompat="@drawable/users" />
